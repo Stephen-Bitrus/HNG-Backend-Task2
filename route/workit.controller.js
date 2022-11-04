@@ -9,10 +9,18 @@ function httpPostWorker(req, res) {
     const slackUsername = 'Abeeujah';
     const result = postWorker(req);
     const operation_type = getEnumType(req.body.operation_type);
-    if (!result || !operation_type) {
+    if (!operation_type) {
         return (res.status(400).json({
             slackUsername,
-            error: "Missing Required Data",
+            error: ['addition', 'add', 'sum', 'plus', 'summation',
+                'subtract', 'difference', 'minus',
+                'multiply', 'product', 'times',],
+        }));
+    }
+    if (!result) {
+        return (res.status(400).json({
+            slackUsername,
+            error: 'Input Specified Should Be An Integer',
         }));
     }
     return (res.status(201).json({
