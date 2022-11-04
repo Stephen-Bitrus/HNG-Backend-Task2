@@ -13,8 +13,8 @@ function httpPostWorker(req, res) {
         return (res.status(400).json({
             slackUsername,
             error: ['addition', 'add', 'sum', 'plus', 'summation',
-                'subtract', 'difference', 'minus',
-                'multiply', 'product', 'times',],
+                'subtract', 'difference', 'minus', 'subtraction',
+                'multiply', 'product', 'times', 'multiplication',],
         }));
     }
     if (!result) {

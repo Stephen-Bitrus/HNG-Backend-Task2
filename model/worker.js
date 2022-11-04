@@ -12,8 +12,8 @@ function multiply(x, y) {
 
 const numpy = Object.freeze({
     'addition': addition,
-    'subtract': subtract,
-    'multiply': multiply,
+    'subtraction': subtract,
+    'multiplication': multiply,
 });
 
 // let ans;
@@ -82,28 +82,36 @@ function postWorker(req) {
                     ans = numpy.addition(wordNum[0], wordNum[1]);
                 }
                     break;
+                case 'subtraction': {
+                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
+                }
+                    break;
                 case 'subtract': {
-                    ans = numpy.subtract(wordNum[0], wordNum[1]);
+                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
                 }
                     break;
                 case 'difference': {
-                    ans = numpy.subtract(wordNum[0], wordNum[1]);
+                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
                 }
                     break;
                 case 'minus': {
-                    ans = numpy.subtract(wordNum[0], wordNum[1]);
+                    ans = numpy.subtraction(wordNum[0], wordNum[1]);
+                }
+                    break;
+                case 'multiplication': {
+                    ans = numpy.multiplication(wordNum[0], wordNum[1]);
                 }
                     break;
                 case 'multiply': {
-                    ans = numpy.multiply(wordNum[0], wordNum[1]);
+                    ans = numpy.multiplication(wordNum[0], wordNum[1]);
                 }
                     break;
                 case 'product': {
-                    ans = numpy.multiply(wordNum[0], wordNum[1]);
+                    ans = numpy.multiplication(wordNum[0], wordNum[1]);
                 }
                     break;
                 case 'times': {
-                    numpy.multiply(wordNum[0], wordNum[1]);
+                    numpy.multiplication(wordNum[0], wordNum[1]);
                 }
                     break;
             }
@@ -138,28 +146,36 @@ function postWorker(req) {
                     ans = numpy.addition(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
+                case 'subtraction': {
+                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
+                }
+                    break;
                 case 'subtract': {
-                    ans = numpy.subtract(wordNum[0] || x, wordNum[1] || y);
+                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
                 case 'difference': {
-                    ans = numpy.subtract(wordNum[0] || x, wordNum[1] || y);
+                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
                 case 'minus': {
-                    ans = numpy.subtract(wordNum[0] || x, wordNum[1] || y);
+                    ans = numpy.subtraction(wordNum[0] || x, wordNum[1] || y);
+                }
+                    break;
+                case 'multiplication': {
+                    ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
                 case 'multiply': {
-                    ans = numpy.multiply(wordNum[0] || x, wordNum[1] || y);
+                    ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
                 case 'product': {
-                    ans = numpy.multiply(wordNum[0] || x, wordNum[1] || y);
+                    ans = numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
                 case 'times': {
-                    numpy.multiply(wordNum[0] || x, wordNum[1] || y);
+                    numpy.multiplication(wordNum[0] || x, wordNum[1] || y);
                 }
                     break;
             }
@@ -189,31 +205,38 @@ function postWorker(req) {
                     ans = numpy.addition(x, y);
                 }
                     break;
+                case 'subtraction': {
+                    ans = numpy.subtraction(x, y);
+                }
+                    break;
                 case 'subtract': {
-                    ans = numpy.subtract(x, y);
+                    ans = numpy.subtraction(x, y);
                 }
                     break;
                 case 'difference': {
-                    ans = numpy.subtract(x, y);
+                    ans = numpy.subtraction(x, y);
                 }
                     break;
                 case 'minus': {
-                    ans = numpy.subtract(x, y);
+                    ans = numpy.subtraction(x, y);
+                }
+                    break;
+                case 'multiplication': {
+                    ans = numpy.multiplication(x, y);
                 }
                     break;
                 case 'multiply': {
-                    ans = numpy.multiply(x, y);
+                    ans = numpy.multiplication(x, y);
                 }
                     break;
                 case 'product': {
-                    ans = numpy.multiply(x, y);
+                    ans = numpy.multiplication(x, y);
                 }
                     break;
                 case 'times': {
-                    ans = numpy.multiply(x, y);
+                    ans = numpy.multiplication(x, y);
                 }
                     break;
-                default: ans = undefined;
             }
         });
     }

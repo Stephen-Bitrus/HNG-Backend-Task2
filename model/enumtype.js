@@ -29,6 +29,10 @@ function getEnumType(words) {
                 ans = numType[0];
             }
                 break;
+            case 'subtraction': {
+                ans = numType[1];
+            }
+                break;
             case 'subtract': {
                 ans = numType[1];
             }
@@ -39,6 +43,10 @@ function getEnumType(words) {
                 break;
             case 'minus': {
                 ans = numType[1];
+            }
+                break;
+            case 'multiplication': {
+                ans = numType[2];
             }
                 break;
             case 'multiply': {
