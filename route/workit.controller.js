@@ -23,7 +23,7 @@ function httpPostWorker(req, res) {
             error: 'Input Specified Should Be An Integer',
         }));
     }
-    return (res.status(201).json({
+    return (res.status(200).json({
         slackUsername,
         result,
         operation_type,
